@@ -14,5 +14,9 @@
             echo $this->config->base_url().'<br />';
             echo $this->config->system_url().'<br />';
         }
+        public function add($num1, $num2){ //http://localhost/Mapoy/Home/add/10/3 -> to perform addition through segment 3 and 4 | through parameters
+            $sum = $num1 + $num2;
+            echo $num1.' + ' .$num2. ' = ' .$sum;
+        }
     }
 ?>
