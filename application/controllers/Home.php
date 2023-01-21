@@ -1,22 +1,45 @@
 <?php
     class Home extends CI_Controller{
-        public function index(){
-            $this->load->helper('url');
-            $this->load->view('Home_view');
+        public function __construct(){
+            parent::__construct();
+            // Your codes here....
+            // Initialization of attributes
+            $monthsary = "January 1, 1901";
+            // Load your configuration/packages/helpers/libraries
+            //$this->load->database();
+            $this->load->library('email');
+            $this->load->helper('url','form_helper');
         }
 
-        public function about(){
-            $this->load->helper('url');
-            $this->load->view('About_view');
+        public function index(){
+            $data['title'] = 'Welcome to Tatay Boy\'s Tapsihan';
+            $this->load->view('include/header', $data);
+
+            $this->load->view('include/nav');
+            $this->load->view('home_view');
+            $this->load->view('include/footer');
         }
-        public function showconfig(){
-            echo $this->config->site_url().'<br />';
-            echo $this->config->base_url().'<br />';
-            echo $this->config->system_url().'<br />';
+
+        public function show_menu(){
+            $data['title'] = 'Tatay Boy\'s Tapsihan Menu';
+            $this->load->view('include/header', $data);
+            $this->load->view('include/nav');
+            $this->load->view('menu_view');
+            $this->load->view('include/footer');
+            
         }
-        public function add($num1, $num2){ //http://localhost/Mapoy/Home/add/10/3 -> to perform addition through segment 3 and 4 | through parameters
-            $sum = $num1 + $num2;
-            echo $num1.' + ' .$num2. ' = ' .$sum;
+
+        public function show_pattern($num){
+            for($i = 1; $i <= $num; $i++):
+                for($j = $num; $j > $i; $j--):
+                    echo '&nbsp;';
+                endfor;
+                for($k = 1; $k <= $i; $k++):
+                    echo '*';
+                endfor;
+                echo '<br />';
+            endfor;
         }
+
     }
 ?>
