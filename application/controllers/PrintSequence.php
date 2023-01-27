@@ -35,7 +35,7 @@
                 echo "Rows: " . $row . "<br><br>";
 
                 $counter = 1;
-                echo "<div style='text-align:right; width: max-content;'>";
+                echo "<div style='text-align:right; width: 100%;'>";
                 for($i=1; $i <= $size; $i++){
                     for ($j=1; $j<=$i+1; $j++){
                         echo $counter++;
