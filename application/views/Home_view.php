@@ -1,5 +1,6 @@
 
 
-    <h1 style="text-align:center">Tatay Boy's Tapsihan</h1>
-    <a href="<?php echo base_url('home/show_pattern/5')?>">Pattern</a>
+    <h1 style="text-align: center; padding-top: 50px;">Technical Summative Assessment 1</h1>
+    <h3 style="text-align: center; padding-top: 10px;">Web System and Technologies</h3>
+    <h5 style="text-align: center; padding-top: 50PX;">Submitted by: Rodrigo P. Mapoy IV</h5>
 
