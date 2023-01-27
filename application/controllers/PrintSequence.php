@@ -28,21 +28,20 @@
 
             $row = $this->uri->segment(3);
 
-            echo "<p align = 'center'>";
-
             if(is_numeric($row)){
-                echo "<p align = 'center'>";
-                echo "Rows: " . $row . "<br><br>";
+                echo '<center>';
+                echo 'Rows: ' . $row . '<br>';
 
                 $counter = 1;
-                echo "<div style='text-align:right; width: 100%;'>";
+
+                echo '<div class = "container"><p style = text-align:right;width:fit-content;>';
                 for($i=1; $i <= $size; $i++){
                     for ($j=1; $j<=$i+1; $j++){
                         echo $counter++;
                     }
-                    echo "<br/>";
+                    echo '<br>';
                 }
-                echo "</p>";
+                echo '</p></div>';
             } else{
                 echo "Invalid Input";
             }
